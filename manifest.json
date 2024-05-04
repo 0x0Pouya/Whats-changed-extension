@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+  "name": "Privacy Policy Tracker",
+  "version": "1.0",
+  "permissions": ["tabs", "storage"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
